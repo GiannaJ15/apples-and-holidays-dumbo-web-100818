@@ -65,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
   value.each do |holiday, supply|
      if holiday.to_s.count(" ") == 0 
        puts "  #{holiday.to_s.capitalize}: #{supply.join(", ")}"
-      elsif holiday.to_s.count(" ") > 0 
+      elsif holiday.to_s.gsub("_"," ").count(" ") > 0 
       puts "  #{holiday.to_s.titlecase.gsub("_"," ")}: #{supply.join(", ")}"
     end
 end
