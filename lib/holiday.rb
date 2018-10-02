@@ -66,6 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
     if holiday.count("_") == 0 
        puts "  #{holiday.to_s.capitalize}: #{supply.join(", ")}"
      else puts "  #{holiday.to_s.gsub!("_"," ").titleize}: #{supply.join(", ")}"
+     end 
 end
 end 
 end 
